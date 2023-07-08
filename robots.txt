@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://Jack24658735.github.io/sitemap.xml
