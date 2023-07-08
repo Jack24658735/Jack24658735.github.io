@@ -9,6 +9,13 @@ profile:
   image: liujack.jpg
   image_circular: false # crops the image to make it circular
   address: >
+      <center>Taiwan</center>
+      <center>
+          <a href="https://www.linkedin.com/in/i-jieh-liu/">CV</a> | 
+          <a href="https://www.linkedin.com/in/i-jieh-liu/">LinkedIn</a> | 
+          <a href="https://github.com/Jack24658735">GitHub</a> |
+          <a href="mailto:liujack0914@gmail.com">Email</a>
+      </center>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
