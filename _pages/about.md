@@ -2,16 +2,16 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: Researcher | AI/DL | Computer Vision
 
 profile:
   align: right
   image: liujack.jpg
   image_circular: false # crops the image to make it circular
   address: >
-      <center>Taiwan</center>
+      <center>Taipei, Taiwan</center>
       <center>
-          <a href="https://www.linkedin.com/in/i-jieh-liu/">CV</a> | 
+          <a href="https://drive.google.com/file/d/1F4fWkVoWVsy14pOCwplRX7yvjWtIhUz1/view?usp=sharing">CV</a> | 
           <a href="https://www.linkedin.com/in/i-jieh-liu/">LinkedIn</a> | 
           <a href="https://github.com/Jack24658735">GitHub</a> |
           <a href="mailto:liujack0914@gmail.com">Email</a>
@@ -22,11 +22,8 @@ latest_posts: true  # includes a list of the newest posts
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
+I am a graduate student pursuing my M.S. degree in the Data Science group under the Communication Engineering Dept. at NTU. My area of focus centers around research and programming, with a particular interest in Deep Learning (DL), and Computer Vision (CV). I have a particular interest in Computer Vision (CV) and strive to enhance my understanding and insight in this field by immersing myself in trending papers. Besides, one of my notable strengths lies in my exceptional problem-solving skills. I possess an unwavering eagerness to learn and adapt to new technologies and tools, always striving to meet the demands of each project I undertake.
 
-LiuJack TODO:
+Currently, I’m advised by [Yu‑Chiang Frank Wang](http://vllab.ee.ntu.edu.tw/ycwang.html) at [Vision and Learning Lab](http://vllab.ee.ntu.edu.tw/). My research primarily revolves around mutiple CV domains, including but not limited to **Federated Learning**, 3D generation, Self-supervised Learning, Transfer Learning, Vision & Language, etc. Through my dedication and continuous exploration, I aim to contribute to the advancement of Computer Vision while expanding my knowledge and expertise in this exciting field.
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
