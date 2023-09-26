@@ -13,8 +13,7 @@ profile:
       <center>
           <a href="https://drive.google.com/file/d/1F4fWkVoWVsy14pOCwplRX7yvjWtIhUz1/view?usp=sharing">CV</a> | 
           <a href="https://www.linkedin.com/in/i-jieh-liu/">LinkedIn</a> | 
-          <a href="https://github.com/Jack24658735">GitHub</a> |
-          <a href="mailto:liujack0914@gmail.com">Email</a>
+          <a href="https://github.com/Jack24658735">GitHub</a>
       </center>
 
 news: true  # includes a list of news items
