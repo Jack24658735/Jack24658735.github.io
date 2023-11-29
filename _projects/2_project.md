@@ -2,7 +2,7 @@
 layout: page
 title: CVPR 2024
 description: a paper about Referring Video Object Segmentation is under review in CVPR 2024
-img: assets/img/3.jpg
+img:
 importance: 2
 category: work
 ---

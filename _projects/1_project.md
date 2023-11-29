@@ -2,7 +2,7 @@
 layout: page
 title: AAAI 2024
 description: a paper about federated learning is under review in AAAI 2024
-img: assets/img/12.jpg
+img:
 importance: 1
 category: work
 ---

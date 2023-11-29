@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One co-first author paper is under review in **CVPR 2024**.
+One first co-author paper is under review in **CVPR 2024**.
