@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One paper is under review in **AAAI 2024**.
+One first author paper is under review in **AAAI 2024**.

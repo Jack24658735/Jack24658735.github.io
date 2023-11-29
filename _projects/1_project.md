@@ -1,7 +1,7 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
+title: AAAI 2024
+description: a paper about federated learning is under review in AAAI 2024
 img: assets/img/12.jpg
 importance: 1
 category: work
