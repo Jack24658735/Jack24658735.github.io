@@ -18,7 +18,7 @@ profile:
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 I am a graduate student pursuing my M.S. degree in the Data Science group under the Communication Engineering Dept. at NTU. My area of focus centers around research and programming, with a particular interest in Deep Learning (DL), and Computer Vision (CV). I have a particular interest in Computer Vision (CV) and strive to enhance my understanding and insight in this field by immersing myself in trending papers. 
