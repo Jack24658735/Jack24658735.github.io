@@ -11,7 +11,7 @@ profile:
   address: >
       <center>Taipei, Taiwan</center>
       <center>
-          <a href="https://drive.google.com/file/d/1F4fWkVoWVsy14pOCwplRX7yvjWtIhUz1/view?usp=sharing">CV</a> | 
+          <a href="https://drive.google.com/file/d/1RHOiaPwZFN76hlOw-rWYP45iBseqXDwu/view?usp=sharing">CV</a> | 
           <a href="https://www.linkedin.com/in/i-jieh-liu/">LinkedIn</a> | 
           <a href="https://github.com/Jack24658735">GitHub</a>
       </center>
