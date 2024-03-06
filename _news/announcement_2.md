@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-11-18 15:59:00-0400
+date: 2024-3-8 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-One first co-author paper is under review in **CVPR 2024**.
+One first co-author paper is under review in **ECCV 2024**.
