@@ -10,10 +10,10 @@
 
   <meta charset="utf-8">
   <meta name="description"
-        content="Language-Guided Transformer for Federated Multi-Label Classification">
-  <meta name="keywords" content="Federated Learning, Vision and Language, Multi-label Classification">
+        content="GroPrompt: Efficient Grounded Prompting and Adaptation for Referring Video Object Segmentation">
+  <meta name="keywords" content="Referring Video Object Segmentation, Vision and Language">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Language-Guided Transformer for Federated Multi-Label Classification</title>
+  <title>GroPrompt: Efficient Grounded Prompting and Adaptation for Referring Video Object Segmentation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -76,23 +76,23 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GroPrompt: Efficient Grounded Prompting and Adaptation for Referring Video Object Segmentation
+          <h1 class="title is-2 publication-title">GroPrompt: Efficient Grounded Prompting and Adaptation for Referring Video Object Segmentation
           </h1>
           
-          <h2 class="title is-size-3 publication-title">CVPRW 2024</h2>
+          <h2 class="title is-size-3 publication-title">CVPRW 2024 (CVinW)</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="http://vllab.ee.ntu.edu.tw/students.html">Ci-Siang Lin*</a><sup>1,2</sup>,</span>
               <span class="author-block">
               <a href="https://jack24658735.github.io/">I-Jieh Liu*</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">Min-Hung Chen</a><sup>2</sup>,
+              <a href="https://minhungchen.netlify.app/">Min-Hung Chen</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="">Chien-Yi Wang</a><sup>2</sup>,
+              <a href="https://chienyiwang.github.io/">Chien-Yi Wang</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a href="">Sifei Liu</a><sup>2</sup>,
+              <a href="https://sifeiliu.net/">Sifei Liu</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a><sup>1,2</sup>,
@@ -105,10 +105,6 @@
             <span class="author-block"><sup>1</sup>National Taiwan University,</span>
             <span class="author-block"><sup>2</sup>NVIDIA</span>
           </div>
-          <!-- <video width="1280" height="720" controls autoplay muted loop>
-            <source src="videos/WebIntroG.mp4" type="video/mp4">
-             Your browser does not support the video tag.
-          </video> -->
 
           
 
@@ -144,6 +140,12 @@
                   </a>
               </span> -->
               <!-- Dataset Link. -->
+              <br>
+              <br>
+              <video width="1280" height="720" controls autoplay muted loop>
+                <source src="https://github.com/Jack24658735/Jack24658735.github.io/raw/master/groprompt/static/videos/video.mp4" type="video/mp4">
+              </video>
+
             </div>
           </div>
         </div>
@@ -156,12 +158,6 @@
 <section class="hero">
   <div class="container is-max-desktop">
       <div class="content has-text-justified">
-      <center><img src="./static/images/model.png" width="100%"></center>  
-        <p>
-          <b>Overview of our proposed GroPrompt framework.</b> In (a), our proposal generation takes each frame It and the referring sentence $S^i$ to 
-          derive object queries $Q^i_t$ and produce the prompt embedding $p^i_t$ for segmentation, with another sentence $S^j$ as input for performing Text-Contrastive Prompt Learning. 
-          In (b), to handle sentence descriptions containing long-term motions or actions in referring video object segmentation, we uniquely present Modality-Contrastive Prompt Learning to align the text with the referred object at the video level.
-        </p>
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -200,47 +196,45 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
-        <center><img src="./static/images/fig2_for_project_page.png" width="100%"></center>
-
+        <h3 class="title is-3">Framework</h3>
         <div class="content has-text-justified">
-          <p>
-            TODO
-          </p>
-        </div>
-        
-        <!--/ Interpolating. -->
+        <center><img src="./static/images/model.png" width="100%"></center>  
+        <p>
+          <b>Overview of our proposed GroPrompt framework.</b> In (a), our proposal generation takes each frame It and the referring sentence $S^i$ to 
+          derive object queries $Q^i_t$ and produce the prompt embedding $p^i_t$ for segmentation, with another sentence $S^j$ as input for performing Text-Contrastive Prompt Learning. 
+          In (b), to handle sentence descriptions containing long-term motions or actions in referring video object segmentation, we uniquely present Modality-Contrastive Prompt Learning to align the text with the referred object at the video level.
+        </p>
 
         <div class="columns is-centered">
           <!-- Visual Effects. -->
           <div class="column">
             <div class="content">
-              <h2 class="title is-3">Model Details</h2>
+              <h2 class="title is-4">Text-Contrastive Prompt Learning.</h2>
               <div class="content has-text-justified">
                 <p>
-                  With the input image $x$ and label $y$, CA-MLE generates the prediction by global model $w^t$ and calibrates the state embeddings, 
-                  while ULE advances the pre-trained label embeddings from CLIP for model aggregation purposes.
+                  Formally, in addition to the input sentence $S_i$, we forward another sentence $S^j$ through our GroPrompt framework to obtain the output proposal $B_t^j$ for another object at each frame. 
+                  To perform contrastive learning, we leverage the prompt encoder from the foundation segmentation models to extract the prompt embeddings $p_t^i$, $p_t^j$, and $\hat{p}_t^i$ for the proposals $B_t^i$ and $B_t^j$ and the ground-truth bounding box $\hat{B}_t^i$, respectively. By taking $p_t^i$, $\hat{p}_t^i$, and $p_t^j$ as the anchor, positive, and negative sample, the frame-level triplet contrastive loss $L_{contra}^f$ would be computed as follows:
                 </p>
               </div>
-              <br>
-              <br>
-              <center><img src="./static/images/fig3_for_project_page.png" width="100%"></center>
+              <center><img src="./static/images/textcon.png" width="100%"></center>
             </div>
           </div>
           <!--/ Visual Effects. -->
 
           <div class="column">
             <div class="content">
-              <h2 class="title is-3">Algorithm</h2>
+              <h2 class="title is-4">Modality-Contrastive Prompt Learning.</h2>
               <div class="content has-text-justified">
                 <p>
-                  We perform local model updates and global model aggregation in one communication round to achieve
-                  a federated learning process.
-                  The pseudo-code of our proposed framework is described
-                  in Algorithm 1 as follows.
+                  In addition to the prompt embedding $p_t^i$ derived in <i>Text-Contrastive Prompt Learning</i>, we also utilize the image encoder to extract the visual features $f_t$. 
+                  With the cross-attention performed at each frame by taking the prompt embedding $p_t^i$ as the query and visual features $f_t$ as keys and values, 
+                  followed by an average pooling layer for temporal aggregation, the video-level content feature $f^i$ would be encoded for the referred object. 
+                  As for the referring sentences $S^i$ and $S^j$, we derive the sentence-level linguistic features $z^i$ and $z^j$ from the text encoder. 
+                  Then, the video-level triplet contrastive loss $L_{contra}^v$ would be computed as follows:
+
                 </p>
               </div>
-              <center><img src="./static/images/algo.png" width="85%"></center>
+              <center><img src="./static/images/videocon.png" width="100%"></center>
             </div>
           </div>
           
