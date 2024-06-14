@@ -82,27 +82,41 @@
           <h2 class="title is-size-3 publication-title">CVPRW 2024</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://jack24658735.github.io/">I-Jieh Liu</a><sup>1</sup>,</span>
+              <a href="http://vllab.ee.ntu.edu.tw/students.html">Ci-Siang Lin*</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+              <a href="https://jack24658735.github.io/">I-Jieh Liu*</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="http://vllab.ee.ntu.edu.tw/students.html">Ci-Siang Lin</a><sup>1,2</sup>,</span>
+              <a href="">Min-Hung Chen</a><sup>2</sup>,
+            </span>
             <span class="author-block">
-              <a href="https://fuenyang1127.github.io/">Fu-En Yang</a><sup>1,2</sup>,
+              <a href="">Chien-Yi Wang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Sifei Liu</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a><sup>1,2</sup>,
             </span>
           </div>
-
+          <div class="is-size-8 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+          </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>National Taiwan University,</span>
             <span class="author-block"><sup>2</sup>NVIDIA</span>
           </div>
+          <!-- <video width="1280" height="720" controls autoplay muted loop>
+            <source src="videos/WebIntroG.mp4" type="video/mp4">
+             Your browser does not support the video tag.
+          </video> -->
+
+          
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2312.07165"
+                <a href="https://jack24658735.github.io/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -110,7 +124,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2312.07165"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -118,9 +132,9 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/Jack24658735/FedLGT"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -128,7 +142,7 @@
                   </span>
                   <span>Code</span>
                   </a>
-              </span>
+              </span> -->
               <!-- Dataset Link. -->
             </div>
           </div>
@@ -142,11 +156,11 @@
 <section class="hero">
   <div class="container is-max-desktop">
       <div class="content has-text-justified">
-      <center><img src="./static/images/fig1_for_project_page.png" width="65%"></center>  
+      <center><img src="./static/images/model.png" width="100%"></center>  
         <p>
-          <!-- <iframe src="fig1.pdf" style="width: 100%;height: 100%;border: none;"></iframe> -->
-          <b>Challenges in multi-label federated learning.</b>
-          Since diverse label correlations can be observed across clients, aggregating local models might not be sufficiently generalizable.
+          <b>Overview of our proposed GroPrompt framework.</b> In (a), our proposal generation takes each frame It and the referring sentence $S^i$ to 
+          derive object queries $Q^i_t$ and produce the prompt embedding $p^i_t$ for segmentation, with another sentence $S^j$ as input for performing Text-Contrastive Prompt Learning. 
+          In (b), to handle sentence descriptions containing long-term motions or actions in referring video object segmentation, we uniquely present Modality-Contrastive Prompt Learning to align the text with the referred object at the video level.
         </p>
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -154,13 +168,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Federated Learning (FL) is an emerging paradigm that enables multiple users to collaboratively train a robust model in a privacy-preserving manner without sharing their private data. 
-            Most existing approaches of FL only consider traditional single-label image classification, ignoring the impact when transferring the task to multi-label image classification. 
-            Nevertheless, it is still challenging for FL to deal with user heterogeneity in their local data distribution in the real-world FL scenario, and this issue becomes even more severe in multi-label image classification. 
-            Inspired by the recent success of Transformers in centralized settings, we propose a novel FL framework for multi-label classification. 
-            Since partial label correlation may be observed by local clients during training, direct aggregation of locally updated models would not produce satisfactory performances. 
-            Thus, we propose a novel FL framework of <b>L</b>anguage-<b>G</b>uided <b>T</b>ransformer (<b>FedLGT</b>) to tackle this challenging task, which aims to exploit and transfer knowledge across different clients for learning a robust global model. 
-            Through extensive experiments on various multi-label datasets (e.g., FLAIR, MS-COCO, etc.), we show that our FedLGT is able to achieve satisfactory performance and outperforms standard FL techniques under multi-label FL scenarios.
+            Referring Video Object Segmentation (RVOS) aims to segment the object referred to by the query sentence throughout the entire video. Most existing methods require end-to-end training with dense mask annotations,
+            which could be computation-consuming and less scalable. In this work, we aim to efficiently adapt foundation segmentation models for addressing RVOS from weak supervision with the proposed Grounded Prompting (<b>GroPrompt</b>) framework. More specifically, we propose TextAware Prompt Contrastive Learning (<b>TAP-CL</b>) to enhance
+            the association between the position prompts and the referring sentences with only box supervisions, including Text-Contrastive Prompt Learning (TextCon) and ModalityContrastive Prompt Learning (ModalCon) at frame level and video level, respectively. With the proposed TAPCL, our GroPrompt framework can generate temporalconsistent yet text-aware position prompts describing locations and movements for the referred object from the video. 
+            The experimental results in the standard RVOS benchmarks (Ref-YouTube-VOS, Ref-DAVIS17, A2D-Sentences, and JHMDB-Sentences) demonstrate the competitive performance of our proposed GroPrompt framework given only
+            bounding box weak supervisions.
           </p>
         </div>
       </div>
@@ -178,6 +190,7 @@
       </div>
     </div> -->
     <!--/ Paper video. -->
+    
   </div>
 </section>
 
@@ -187,16 +200,12 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Framework</h2>
+        <h2 class="title is-3">Method</h2>
         <center><img src="./static/images/fig2_for_project_page.png" width="100%"></center>
 
         <div class="content has-text-justified">
           <p>
-            <b>Overview of FedLGT.</b>
-            Given an image with multi-labels to predict, the global model from each communication
-            round updates the local model with Client-Aware Masked Label Embedding (CA-MLE), which exploits partial label correlation
-            observed at each client. In order to properly align local models for multi-label FL, universal label embeddings (ULE) are utilized
-            in FedLGT. (Best viewed in color.)
+            TODO
           </p>
         </div>
         
@@ -237,18 +246,35 @@
           
         </div>
         <h3 class="title is-3">Experiments</h3>
-
         <div class="content has-text-justified">
-          <center><img src="./static/images/FLAIR_table1.png" width="75%"></center>
+          <center><img src="./static/images/rvos_table1.png" width="100%"></center>
           <p>
-            Table 1: Comparisons of <b>coarse-grained</b> multi-label classification
-            task on FLAIR. <b>Bold</b> denotes the best result under FL setting.
+            Table 1. Quantitative comparison to state-of-the-art methods on the validation split of Ref-YouTube-VOS and Ref-DAVIS17. RefYT:
+            Ref-YouTube-VOS, RefD: Ref-DAVIS, RefC: RefCOCO [29, 54], AVOS: Audio-VOS [32], AVSB: AVSBench [57], YT: YouTube-VOS
+            2019 [46], D: DAVIS17 [33], O: Occluded VIS [34], LV: Long-term VOS [16], G: GOT-10K [17], La: LaSOT [13], T: TrackingNet [31],
+            B: BDD100K [53], V: VIS19 [50].
           </p>
-          <center><img src="./static/images/FLAIR_table2.png" width="75%"></center>
+          <center><img src="./static/images/rvos_table2.png" width="100%"></center>
+          <center><p>
+            Table 2. <b>The quantitative evaluation on A2D-Sentences</b>, with Precision@K, Overall IoU and Mean IoU.
+          </p></center>
+          <center><img src="./static/images/rvos_table3.png" width="100%"></center>
+          <center><p>
+            Table 3. <b>The quantitative evaluation on JHMDB-Sentences</b>, with Precision@K, Overall IoU and Mean IoU.
+          </p></center>
+        </div>
+
+        <h3 class="title is-3">Visualization</h3>
+        <div class="content has-text-justified">
+          <center><img src="./static/images/rvos_vis1.png" width="100%"></center>
           <p>
-            Table 2: Comparisons of <b>fine-grained</b> multi-label classification
-            task on FLAIR. <b>Bold</b> denotes the best result under FL setting.
+            Figure 2. Qualitative comparisons of the state-of-the-art methods on Refer-DAVIS17, where “GT-bbox + SAM” represents the result by
+taking ground-truth bounding boxes to prompt SAM.
           </p>
+          <center><img src="./static/images/rvos_vis2.png" width="100%"></center>
+          <center><p>
+            Figure 3. Qualitative comparisons of the state-of-the-art methods on Refer-Youtube-VOS.
+          </p></center>
         </div>
        
       </div>
@@ -265,10 +291,10 @@
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
       If you find this useful for your research, please consider citing:
-    <pre><code>@inproceedings{liu2024fedlgt,
-  author    = {I-Jieh Liu and Ci-Siang Lin and Fu-En Yang and Yu-Chiang Frank Wang},
-  title     = {Language-Guided Transformer for Federated Multi-Label Classification},
-  booktitle = {AAAI},
+    <pre><code>@inproceedings{lin2024groprompt,
+  author    = {Ci-Siang Lin and I-Jieh Liu and Min-Hung Chen and Chien-Yi Wang and Sifei Liu and Yu-Chiang Frank Wang},
+  title     = {GroPrompt: Efficient Grounded Prompting and Adaptation for Referring Video Object Segmentation},
+  booktitle = {CVPRW},
   year      = {2024},
 }</code></pre>
   </div>
