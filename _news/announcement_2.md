@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-5-20 15:59:00-0400
+date: 2024-6-15 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-One first co-author paper is under review in **CVPRW 2024** CV in the wild.
+Our paper [GroPrompt](https://jack24658735.github.io/groprompt/) is accepted by **CVPRW 2024** (CV in the wild). See you in Seattle!
